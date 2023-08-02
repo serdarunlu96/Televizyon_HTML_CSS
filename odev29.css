@@ -1,0 +1,114 @@
+html, body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.buyuk-dikdortgen {
+  width: 240px;
+  height: 240px;
+  background-color: grey;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+
+.ust-siyah-dikdortgen {
+  width: calc(100% - 30px);
+  height: calc(90% - 40px);
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.mavi-yazi {
+  font-size: 30px;
+  color: blue;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.alt-siyah-dikdortgen {
+  width: 100%;
+  height: calc(40% - 60px);
+  background-color: black;
+  border-radius: 15px 15px 15px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.bej-kare {
+  width: 45px;
+  height: 30px;
+  background-color: beige; 
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kucuk-kareler {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.kirmizi-yazi {
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.ust-siyah-dikdortgen {
+  margin: 0 15px;
+}
+
+.mavi-yazi {
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.bej-kare button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: red;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.kirmizi-yazi[disabled] {
+  color: red;
+  background-color: beige; 
+  cursor: not-allowed;
+}
+
+.mavi-yazi[disabled] {
+  color: black;
+  background-color: white;
+  cursor: not-allowed;
+}

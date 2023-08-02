@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ÖDEV 29 Tasarımı</title>
+    <link rel="stylesheet" type="text/css" href="odev29.css">
+</head>
+<body>
+    <div class="buyuk-dikdortgen">
+        <div class="ust-siyah-dikdortgen"></div>
+        <div class="mavi-yazi">ÖNCE AÇINIZ</div>
+        <div class="alt-siyah-dikdortgen">
+            <div class="bej-kare">
+                <button class="kirmizi-yazi" onclick="O_button()">0</button>
+            </div>
+            <div class="bej-kare">
+                <button class="kirmizi-yazi" onclick="A_button()" disabled>A</button>
+            </div>
+            <div class="bej-kare">
+                <button class="kirmizi-yazi" onclick="N_button()" disabled>N</button>
+            </div>
+            <div class="bej-kare">
+                <button class="kirmizi-yazi" onclick="K_button()" disabled>K</button>
+            </div>
+            <div class="bej-kare">
+                <button class="kirmizi-yazi" onclick="Button_1()" disabled>1</button>
+            </div>
+            <div class="bej-kare">
+                <button class="kirmizi-yazi" onclick="Button_3()" disabled>3</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let isOpen = false;
+
+        function O_button() {
+            isOpen = !isOpen;
+            if (isOpen) {
+                document.querySelector('.mavi-yazi').textContent = "AÇILDI";
+                document.querySelector('.mavi-yazi').style.color = "black";
+                document.querySelector('.mavi-yazi').style.backgroundColor = "white";
+                document.querySelector('.alt-siyah-dikdortgen').style.backgroundColor = "black";
+                document.querySelector('.ust-siyah-dikdortgen').style.backgroundColor = "white";
+                document.querySelectorAll('.bej-kare:not(:first-child) button').forEach(elem => {
+                    elem.disabled = false;
+                    elem.style.color = "red";
+                    elem.style.backgroundColor = "white";
+                });
+            } else {
+                document.querySelector('.mavi-yazi').textContent = "KAPANDI";
+                document.querySelector('.mavi-yazi').style.color = "blue";
+                document.querySelector('.mavi-yazi').style.backgroundColor = "black";
+                document.querySelector('.alt-siyah-dikdortgen').style.backgroundColor = "black";
+                document.querySelector('.ust-siyah-dikdortgen').style.backgroundColor = "black";
+                document.querySelectorAll('.bej-kare:not(:first-child) button').forEach(elem => {
+                    elem.disabled = true;
+                    elem.style.color = "red";
+                    elem.style.backgroundColor = "beige";
+                });
+            }
+        }
+
+        function A_button() {
+            document.querySelector('.mavi-yazi').textContent = "A";
+            document.querySelector('.mavi-yazi').style.color = "white";
+            document.querySelector('.mavi-yazi').style.backgroundColor = "red";
+            document.querySelector('.ust-siyah-dikdortgen').style.backgroundColor = "red";
+        }
+
+        function N_button() {
+            document.querySelector('.mavi-yazi').textContent = "N";
+            document.querySelector('.mavi-yazi').style.color = "red";
+            document.querySelector('.mavi-yazi').style.backgroundColor = "white";
+            document.querySelector('.ust-siyah-dikdortgen').style.backgroundColor = "white";
+        }
+
+        function K_button() {
+            document.querySelector('.mavi-yazi').textContent = "K";
+            document.querySelector('.mavi-yazi').style.color = "white";
+            document.querySelector('.mavi-yazi').style.backgroundColor = "blue";
+            document.querySelector('.ust-siyah-dikdortgen').style.backgroundColor = "blue";
+        }
+
+        function Button_1() {
+            document.querySelector('.mavi-yazi').textContent = "1";
+            document.querySelector('.mavi-yazi').style.color = "blue";
+            document.querySelector('.mavi-yazi').style.backgroundColor = "white";
+            document.querySelector('.ust-siyah-dikdortgen').style.backgroundColor = "white";
+        }
+
+        function Button_3() {
+            document.querySelector('.mavi-yazi').textContent = "3";
+            document.querySelector('.mavi-yazi').style.color = "white";
+            document.querySelector('.mavi-yazi').style.backgroundColor = "gray";
+            document.querySelector('.ust-siyah-dikdortgen').style.backgroundColor = "gray";
+        }
+    </script>
+</body>
+</html>
